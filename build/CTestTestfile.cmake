@@ -7,5 +7,4 @@
 subdirs("gtest")
 subdirs("first_package")
 subdirs("project2/my_robot")
-subdirs("simple_arm")
 subdirs("project2/ball_chaser")

@@ -2660,28 +2660,6 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
-      <model name='my_robot'>
-        <pose>0.000109 -7e-06 0.1 0 0.000667 4.4e-05</pose>
-        <scale>1 1 1</scale>
-        <link name='left_wheel'>
-          <pose>0.000103 0.149993 0.1 0 0.000981 4.4e-05</pose>
-          <velocity>-2e-05 -0 0 7e-06 -0.000199 1e-06</velocity>
-          <acceleration>-0.039403 -0.001249 0.000634 0.012413 -0.393673 0.000197</acceleration>
-          <wrench>-0.197013 -0.006243 0.003169 0 -0 0</wrench>
-        </link>
-        <link name='right_wheel'>
-          <pose>0.000116 -0.150007 0.1 0 0.001271 4.4e-05</pose>
-          <velocity>-1.9e-05 -0 0 -2e-06 -0.000191 4e-06</velocity>
-          <acceleration>-0.038791 0.000191 0.0006 -0.00226 -0.386223 0.005328</acceleration>
-          <wrench>-0.193956 0.000955 0.003 0 -0 0</wrench>
-        </link>
-        <link name='robot_footprint'>
-          <pose>0.000109 -7e-06 0.1 0 0.000667 4.4e-05</pose>
-          <velocity>-2e-05 -1e-06 -1e-06 5e-06 -0.000195 2e-06</velocity>
-          <acceleration>-0.039073 -0.001645 -0.001767 0.009724 -0.389987 0.002006</acceleration>
-          <wrench>-0.590003 -0.024842 -0.026676 0 -0 0</wrench>
-        </link>
-      </model>
       <model name='peachtree_apt'>
         <pose>0.573213 -0.838072 0 0 -0 0</pose>
         <scale>1 1 1</scale>
