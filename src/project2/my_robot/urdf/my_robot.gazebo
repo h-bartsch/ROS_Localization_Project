@@ -24,6 +24,7 @@
       <publishTf>1</publishTf>
       <publishOdomTF>true</publishOdomTF>
       <commandTopic>cmd_vel</commandTopic>
+      <broadcastTF>true</broadcastTF>
     </plugin>
   </gazebo>
 

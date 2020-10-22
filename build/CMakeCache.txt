@@ -20,6 +20,14 @@ BUILD_GMOCK:BOOL=ON
 //Build dynamically-linked binaries
 BUILD_SHARED_LIBS:BOOL=ON
 
+//The directory containing a CMake configuration file for Boost.
+Boost_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Boost-1.71.0
+
+//Path to a file.
+Boost_INCLUDE_DIR:PATH=/usr/include
+
+Boost_SYSTEM_LIBRARY_RELEASE:STRING=/usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0
+
 //List of ';' separated packages to exclude
 CATKIN_BLACKLIST_PACKAGES:STRING=
 
@@ -337,6 +345,9 @@ LSB_RELEASE_EXECUTABLE:FILEPATH=/usr/bin/lsb_release
 //Path to a program.
 NOSETESTS:FILEPATH=/usr/bin/nosetests3
 
+//pkg-config executable
+PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
+
 //Path to a program.
 PYTHON_EXECUTABLE:FILEPATH=/usr/bin/python3
 
@@ -351,6 +362,30 @@ Project_BINARY_DIR:STATIC=/home/hayden_b/workspace/catkin_ws/build
 
 //Value Computed by CMake
 Project_SOURCE_DIR:STATIC=/home/hayden_b/workspace/catkin_ws/src
+
+//Path to a file.
+Protobuf_INCLUDE_DIR:PATH=/usr/include
+
+//Path to a library.
+Protobuf_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libprotobuf.so
+
+//Path to a library.
+Protobuf_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libprotobuf.so
+
+//Path to a library.
+Protobuf_LITE_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libprotobuf-lite.so
+
+//Path to a library.
+Protobuf_LITE_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libprotobuf-lite.so
+
+//The Google Protocol Buffers Compiler
+Protobuf_PROTOC_EXECUTABLE:FILEPATH=/usr/bin/protoc
+
+//Path to a library.
+Protobuf_PROTOC_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libprotoc.so
+
+//Path to a library.
+Protobuf_PROTOC_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libprotoc.so
 
 //Path to a library.
 RT_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/librt.so
@@ -385,11 +420,23 @@ ball_chaser_BINARY_DIR:STATIC=/home/hayden_b/workspace/catkin_ws/build/project2/
 //Value Computed by CMake
 ball_chaser_SOURCE_DIR:STATIC=/home/hayden_b/workspace/catkin_ws/src/project2/ball_chaser
 
+//The directory containing a CMake configuration file for boost_headers.
+boost_headers_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/boost_headers-1.71.0
+
+//The directory containing a CMake configuration file for boost_system.
+boost_system_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/boost_system-1.71.0
+
 //The directory containing a CMake configuration file for catkin.
 catkin_DIR:PATH=/opt/ros/noetic/share/catkin/cmake
 
 //The directory containing a CMake configuration file for class_loader.
 class_loader_DIR:PATH=/opt/ros/noetic/share/class_loader/cmake
+
+//Dependencies for the target
+collision_map_creator_LIB_DEPENDS:STATIC=general;collision_map_creator_msgs;general;Boost::system;general;gazebo_transport;general;gazebo_physics;general;gazebo_sensors;general;gazebo_rendering;general;gazebo_gui;general;gazebo_client;general;gazebo_msgs;general;gazebo_common;general;gazebo;general;boost_thread;general;boost_system;general;boost_filesystem;general;boost_program_options;general;boost_regex;general;boost_iostreams;general;boost_date_time;general;sdformat9;general;tbb;general;atomic;general;ignition-fuel_tools4;general;ignition-transport8;general;uuid;general;ignition-msgs5;general;protobuf;general;ignition-math6;general;tinyxml2;
+
+//Dependencies for the target
+collision_map_creator_msgs_LIB_DEPENDS:STATIC=general;/usr/lib/x86_64-linux-gnu/libprotobuf.so;
 
 //The directory containing a CMake configuration file for controller_interface.
 controller_interface_DIR:PATH=/opt/ros/noetic/share/controller_interface/cmake
@@ -491,6 +538,90 @@ my_robot_BINARY_DIR:STATIC=/home/hayden_b/workspace/catkin_ws/build/project2/my_
 //Value Computed by CMake
 my_robot_SOURCE_DIR:STATIC=/home/hayden_b/workspace/catkin_ws/src/project2/my_robot
 
+//Value Computed by CMake
+pgm_map_creator_BINARY_DIR:STATIC=/home/hayden_b/workspace/catkin_ws/build/pgm_map_creator
+
+//Value Computed by CMake
+pgm_map_creator_SOURCE_DIR:STATIC=/home/hayden_b/workspace/catkin_ws/src/pgm_map_creator
+
+//Path to a library.
+pkgcfg_lib_GAZEBO_atomic:FILEPATH=pkgcfg_lib_GAZEBO_atomic-NOTFOUND
+
+//Path to a library.
+pkgcfg_lib_GAZEBO_boost_date_time:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_date_time.so
+
+//Path to a library.
+pkgcfg_lib_GAZEBO_boost_filesystem:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+
+//Path to a library.
+pkgcfg_lib_GAZEBO_boost_iostreams:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_iostreams.so
+
+//Path to a library.
+pkgcfg_lib_GAZEBO_boost_program_options:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_program_options.so
+
+//Path to a library.
+pkgcfg_lib_GAZEBO_boost_regex:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_regex.so
+
+//Path to a library.
+pkgcfg_lib_GAZEBO_boost_system:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_system.so
+
+//Path to a library.
+pkgcfg_lib_GAZEBO_boost_thread:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_thread.so
+
+//Path to a library.
+pkgcfg_lib_GAZEBO_gazebo:FILEPATH=/usr/lib/x86_64-linux-gnu/libgazebo.so
+
+//Path to a library.
+pkgcfg_lib_GAZEBO_gazebo_client:FILEPATH=/usr/lib/x86_64-linux-gnu/libgazebo_client.so
+
+//Path to a library.
+pkgcfg_lib_GAZEBO_gazebo_common:FILEPATH=/usr/lib/x86_64-linux-gnu/libgazebo_common.so
+
+//Path to a library.
+pkgcfg_lib_GAZEBO_gazebo_gui:FILEPATH=/usr/lib/x86_64-linux-gnu/libgazebo_gui.so
+
+//Path to a library.
+pkgcfg_lib_GAZEBO_gazebo_msgs:FILEPATH=/usr/lib/x86_64-linux-gnu/libgazebo_msgs.so
+
+//Path to a library.
+pkgcfg_lib_GAZEBO_gazebo_physics:FILEPATH=/usr/lib/x86_64-linux-gnu/libgazebo_physics.so
+
+//Path to a library.
+pkgcfg_lib_GAZEBO_gazebo_rendering:FILEPATH=/usr/lib/x86_64-linux-gnu/libgazebo_rendering.so
+
+//Path to a library.
+pkgcfg_lib_GAZEBO_gazebo_sensors:FILEPATH=/usr/lib/x86_64-linux-gnu/libgazebo_sensors.so
+
+//Path to a library.
+pkgcfg_lib_GAZEBO_gazebo_transport:FILEPATH=/usr/lib/x86_64-linux-gnu/libgazebo_transport.so
+
+//Path to a library.
+pkgcfg_lib_GAZEBO_ignition-fuel_tools4:FILEPATH=/usr/lib/x86_64-linux-gnu/libignition-fuel_tools4.so
+
+//Path to a library.
+pkgcfg_lib_GAZEBO_ignition-math6:FILEPATH=/usr/lib/x86_64-linux-gnu/libignition-math6.so
+
+//Path to a library.
+pkgcfg_lib_GAZEBO_ignition-msgs5:FILEPATH=/usr/lib/x86_64-linux-gnu/libignition-msgs5.so
+
+//Path to a library.
+pkgcfg_lib_GAZEBO_ignition-transport8:FILEPATH=/usr/lib/x86_64-linux-gnu/libignition-transport8.so
+
+//Path to a library.
+pkgcfg_lib_GAZEBO_protobuf:FILEPATH=/usr/lib/x86_64-linux-gnu/libprotobuf.so
+
+//Path to a library.
+pkgcfg_lib_GAZEBO_sdformat9:FILEPATH=/usr/lib/x86_64-linux-gnu/libsdformat9.so
+
+//Path to a library.
+pkgcfg_lib_GAZEBO_tbb:FILEPATH=/usr/lib/x86_64-linux-gnu/libtbb.so
+
+//Path to a library.
+pkgcfg_lib_GAZEBO_tinyxml2:FILEPATH=/usr/lib/x86_64-linux-gnu/libtinyxml2.so
+
+//Path to a library.
+pkgcfg_lib_GAZEBO_uuid:FILEPATH=/usr/lib/x86_64-linux-gnu/libuuid.so
+
 //The directory containing a CMake configuration file for pluginlib.
 pluginlib_DIR:PATH=/opt/ros/noetic/share/pluginlib/cmake
 
@@ -515,6 +646,9 @@ roslib_DIR:PATH=/opt/ros/noetic/share/roslib/cmake
 //The directory containing a CMake configuration file for rospack.
 rospack_DIR:PATH=/opt/ros/noetic/share/rospack/cmake
 
+//The directory containing a CMake configuration file for rospy.
+rospy_DIR:PATH=/opt/ros/noetic/share/rospy/cmake
+
 //The directory containing a CMake configuration file for rostime.
 rostime_DIR:PATH=/opt/ros/noetic/share/rostime/cmake
 
@@ -527,6 +661,12 @@ simple_arm_SOURCE_DIR:STATIC=/home/hayden_b/workspace/catkin_ws/src/simple_arm
 //The directory containing a CMake configuration file for std_msgs.
 std_msgs_DIR:PATH=/opt/ros/noetic/share/std_msgs/cmake
 
+//Value Computed by CMake
+teleop_twist_keyboard_BINARY_DIR:STATIC=/home/hayden_b/workspace/catkin_ws/build/teleop_twist_keyboard
+
+//Value Computed by CMake
+teleop_twist_keyboard_SOURCE_DIR:STATIC=/home/hayden_b/workspace/catkin_ws/src/teleop_twist_keyboard
+
 //The directory containing a CMake configuration file for xmlrpcpp.
 xmlrpcpp_DIR:PATH=/opt/ros/noetic/share/xmlrpcpp/cmake
 
@@ -535,6 +675,8 @@ xmlrpcpp_DIR:PATH=/opt/ros/noetic/share/xmlrpcpp/cmake
 # INTERNAL cache entries
 ########################
 
+//ADVANCED property for variable: Boost_DIR
+Boost_DIR-ADVANCED:INTERNAL=1
 //catkin environment
 CATKIN_ENV:INTERNAL=/home/hayden_b/workspace/catkin_ws/build/catkin_generated/env_cached.sh
 CATKIN_TEST_RESULTS_DIR:INTERNAL=/home/hayden_b/workspace/catkin_ws/build/test_results
@@ -678,7 +820,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=7
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=8
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -721,12 +863,53 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Details about finding Boost
+FIND_PACKAGE_MESSAGE_DETAILS_Boost:INTERNAL=[/usr/lib/x86_64-linux-gnu/cmake/Boost-1.71.0/BoostConfig.cmake][cfound components: system ][v1.71.0()]
 //Details about finding PY_em
 FIND_PACKAGE_MESSAGE_DETAILS_PY_em:INTERNAL=[/usr/lib/python3/dist-packages/em.py][v()]
+//Details about finding PkgConfig
+FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/bin/pkg-config][v0.29.1()]
+//Details about finding Protobuf
+FIND_PACKAGE_MESSAGE_DETAILS_Protobuf:INTERNAL=[/usr/lib/x86_64-linux-gnu/libprotobuf.so;-lpthread][/usr/include][v3.6.1()]
 //Details about finding PythonInterp
 FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/usr/bin/python3][v3.8.5()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
+GAZEBO_CFLAGS:INTERNAL=-std=c++11;-std=c++17;-isystem;/usr/include/mit-krb5;-std=c++17;-pthread;-std=c++17;-I/usr/include/gazebo-11;-I/usr/include/sdformat-9.2;-I/usr/include/ignition/fuel_tools4;-I/usr/include/x86_64-linux-gnu;-I/usr/include/ignition/common3;-I/usr/include/ignition/transport8;-I/usr/include/pgm-5.2;-I/usr/include/uuid;-I/usr/include/ignition/msgs5;-I/usr/include/ignition/math6;-I/usr/include/ignition/cmake2
+GAZEBO_CFLAGS_I:INTERNAL=
+GAZEBO_CFLAGS_OTHER:INTERNAL=-std=c++11;-std=c++17;-isystem;/usr/include/mit-krb5;-std=c++17;-pthread;-std=c++17
+GAZEBO_FOUND:INTERNAL=1
+GAZEBO_INCLUDEDIR:INTERNAL=/usr/include
+GAZEBO_INCLUDE_DIRS:INTERNAL=/usr/include/gazebo-11;/usr/include/sdformat-9.2;/usr/include/ignition/fuel_tools4;/usr/include/x86_64-linux-gnu;/usr/include/ignition/common3;/usr/include/ignition/transport8;/usr/include/pgm-5.2;/usr/include/uuid;/usr/include/ignition/msgs5;/usr/include/ignition/math6;/usr/include/ignition/cmake2
+GAZEBO_LDFLAGS:INTERNAL=-L/usr/lib/x86_64-linux-gnu/gazebo-11/plugins;-Wl,-rpath,/usr/lib/x86_64-linux-gnu/gazebo-11/plugins;-lgazebo_transport;-lgazebo_physics;-lgazebo_sensors;-lgazebo_rendering;-lgazebo_gui;-lgazebo_client;-lgazebo_msgs;-lgazebo_common;-lgazebo;-lboost_thread;-lboost_system;-lboost_filesystem;-lboost_program_options;-lboost_regex;-lboost_iostreams;-lboost_date_time;-lsdformat9;-ltbb;-latomic;-lignition-fuel_tools4;-lignition-transport8;-luuid;-lignition-msgs5;-lprotobuf;-pthread;-lignition-math6;-ltinyxml2
+GAZEBO_LDFLAGS_OTHER:INTERNAL=-Wl,-rpath,/usr/lib/x86_64-linux-gnu/gazebo-11/plugins;-pthread
+GAZEBO_LIBDIR:INTERNAL=/usr/lib/x86_64-linux-gnu
+GAZEBO_LIBRARIES:INTERNAL=gazebo_transport;gazebo_physics;gazebo_sensors;gazebo_rendering;gazebo_gui;gazebo_client;gazebo_msgs;gazebo_common;gazebo;boost_thread;boost_system;boost_filesystem;boost_program_options;boost_regex;boost_iostreams;boost_date_time;sdformat9;tbb;atomic;ignition-fuel_tools4;ignition-transport8;uuid;ignition-msgs5;protobuf;ignition-math6;tinyxml2
+GAZEBO_LIBRARY_DIRS:INTERNAL=/usr/lib/x86_64-linux-gnu/gazebo-11/plugins
+GAZEBO_LIBS:INTERNAL=
+GAZEBO_LIBS_L:INTERNAL=
+GAZEBO_LIBS_OTHER:INTERNAL=
+GAZEBO_LIBS_PATHS:INTERNAL=
+GAZEBO_MODULE_NAME:INTERNAL=gazebo
+GAZEBO_PREFIX:INTERNAL=/usr
+GAZEBO_STATIC_CFLAGS:INTERNAL=-std=c++11;-std=c++17;-isystem;/usr/include/mit-krb5;-std=c++17;-pthread;-std=c++17;-I/usr/include/gazebo-11;-I/usr/include/sdformat-9.2;-I/usr/include/ignition/fuel_tools4;-I/usr/include/x86_64-linux-gnu;-I/usr/include/ignition/common3;-I/usr/include/ignition/transport8;-I/usr/include/pgm-5.2;-I/usr/include/uuid;-I/usr/include/ignition/msgs5;-I/usr/include/ignition/math6;-I/usr/include/ignition/cmake2
+GAZEBO_STATIC_CFLAGS_I:INTERNAL=
+GAZEBO_STATIC_CFLAGS_OTHER:INTERNAL=-std=c++11;-std=c++17;-isystem;/usr/include/mit-krb5;-std=c++17;-pthread;-std=c++17
+GAZEBO_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/gazebo-11;/usr/include/sdformat-9.2;/usr/include/ignition/fuel_tools4;/usr/include/x86_64-linux-gnu;/usr/include/ignition/common3;/usr/include/ignition/transport8;/usr/include/pgm-5.2;/usr/include/uuid;/usr/include/ignition/msgs5;/usr/include/ignition/math6;/usr/include/ignition/cmake2
+GAZEBO_STATIC_LDFLAGS:INTERNAL=-L/usr/lib/x86_64-linux-gnu/gazebo-11/plugins;-L/usr/lib/x86_64-linux-gnu/mit-krb5;-L/usr//usr/lib/x86_64-linux-gnu;-L/usr/lib/x86_64-linux-gnu/mit-krb5;-Wl,-rpath,/usr/lib/x86_64-linux-gnu/gazebo-11/plugins;-lgazebo_transport;-lgazebo_physics;-lgazebo_sensors;-lgazebo_rendering;-lgazebo_gui;-lgazebo_client;-lgazebo_msgs;-lgazebo_common;-lgazebo;-lboost_thread;-lboost_system;-lboost_filesystem;-lboost_program_options;-lboost_regex;-lboost_iostreams;-lboost_date_time;-lsdformat9;-ltbb;-latomic;-lignition-fuel_tools4;-lcurl;-lnghttp2;-lidn2;-lrtmp;-lssh;-lpsl;-lssl;-lcrypto;-lssl;-lcrypto;-Wl,-Bsymbolic-functions;-Wl,-z,relro;-lgssapi_krb5;-lkrb5;-lk5crypto;-lcom_err;-llber;-lldap;-llber;-lbrotlidec;-lz;-lyaml;-lzip;-lbz2;-lz;-lignition-common3;-ldl;-lignition-transport8;-lzmq;-lstdc++;-lpthread;-lrt;-lgssapi_krb5;-lkrb5;-lk5crypto;-lcom_err;-lkrb5support;-lsodium;-pthread;-lpgm;-lpthread;-lm;-lnorm;-lstdc++;-lprotolib;-luuid;-lignition-msgs5;-lprotobuf;-pthread;-lz;-lignition-math6;-ltinyxml2
+GAZEBO_STATIC_LDFLAGS_OTHER:INTERNAL=-Wl,-rpath,/usr/lib/x86_64-linux-gnu/gazebo-11/plugins;-Wl,-Bsymbolic-functions;-Wl,-z,relro;-pthread
+GAZEBO_STATIC_LIBDIR:INTERNAL=
+GAZEBO_STATIC_LIBRARIES:INTERNAL=gazebo_transport;gazebo_physics;gazebo_sensors;gazebo_rendering;gazebo_gui;gazebo_client;gazebo_msgs;gazebo_common;gazebo;boost_thread;boost_system;boost_filesystem;boost_program_options;boost_regex;boost_iostreams;boost_date_time;sdformat9;tbb;atomic;ignition-fuel_tools4;curl;nghttp2;idn2;rtmp;ssh;psl;ssl;crypto;ssl;crypto;gssapi_krb5;krb5;k5crypto;com_err;lber;ldap;lber;brotlidec;z;yaml;zip;bz2;z;ignition-common3;dl;ignition-transport8;zmq;stdc++;pthread;rt;gssapi_krb5;krb5;k5crypto;com_err;krb5support;sodium;pgm;pthread;m;norm;stdc++;protolib;uuid;ignition-msgs5;protobuf;z;ignition-math6;tinyxml2
+GAZEBO_STATIC_LIBRARY_DIRS:INTERNAL=/usr/lib/x86_64-linux-gnu/gazebo-11/plugins;/usr/lib/x86_64-linux-gnu/mit-krb5;/usr//usr/lib/x86_64-linux-gnu;/usr/lib/x86_64-linux-gnu/mit-krb5
+GAZEBO_STATIC_LIBS:INTERNAL=
+GAZEBO_STATIC_LIBS_L:INTERNAL=
+GAZEBO_STATIC_LIBS_OTHER:INTERNAL=
+GAZEBO_STATIC_LIBS_PATHS:INTERNAL=
+GAZEBO_VERSION:INTERNAL=11.1.0
+GAZEBO_gazebo_INCLUDEDIR:INTERNAL=
+GAZEBO_gazebo_LIBDIR:INTERNAL=
+GAZEBO_gazebo_PREFIX:INTERNAL=
+GAZEBO_gazebo_VERSION:INTERNAL=
 GMOCK_FROM_SOURCE_FOUND:INTERNAL=TRUE
 GMOCK_FROM_SOURCE_INCLUDE_DIRS:INTERNAL=/usr/src/googletest/googlemock/include
 GMOCK_FROM_SOURCE_LIBRARIES:INTERNAL=gmock
@@ -747,14 +930,64 @@ GTEST_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 GTEST_MAIN_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: GTEST_MAIN_LIBRARY_DEBUG
 GTEST_MAIN_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
+PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PYTHON_EXECUTABLE
 PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
 //This needs to be in PYTHONPATH when 'setup.py install' is called.
 //  And it needs to match.  But setuptools won't tell us where
 // it will install things.
 PYTHON_INSTALL_DIR:INTERNAL=lib/python3/dist-packages
+//ADVANCED property for variable: Protobuf_INCLUDE_DIR
+Protobuf_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Protobuf_LIBRARY_DEBUG
+Protobuf_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Protobuf_LIBRARY_RELEASE
+Protobuf_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Protobuf_LITE_LIBRARY_DEBUG
+Protobuf_LITE_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Protobuf_LITE_LIBRARY_RELEASE
+Protobuf_LITE_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Protobuf_PROTOC_EXECUTABLE
+Protobuf_PROTOC_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Protobuf_PROTOC_LIBRARY_DEBUG
+Protobuf_PROTOC_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Protobuf_PROTOC_LIBRARY_RELEASE
+Protobuf_PROTOC_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+SDF_CFLAGS:INTERNAL=
+SDF_CFLAGS_I:INTERNAL=
+SDF_CFLAGS_OTHER:INTERNAL=
+SDF_FOUND:INTERNAL=
+SDF_INCLUDEDIR:INTERNAL=
+SDF_LIBDIR:INTERNAL=
+SDF_LIBS:INTERNAL=
+SDF_LIBS_L:INTERNAL=
+SDF_LIBS_OTHER:INTERNAL=
+SDF_LIBS_PATHS:INTERNAL=
+SDF_MODULE_NAME:INTERNAL=
+SDF_PREFIX:INTERNAL=
+SDF_STATIC_CFLAGS:INTERNAL=
+SDF_STATIC_CFLAGS_I:INTERNAL=
+SDF_STATIC_CFLAGS_OTHER:INTERNAL=
+SDF_STATIC_LIBDIR:INTERNAL=
+SDF_STATIC_LIBS:INTERNAL=
+SDF_STATIC_LIBS_L:INTERNAL=
+SDF_STATIC_LIBS_OTHER:INTERNAL=
+SDF_STATIC_LIBS_PATHS:INTERNAL=
+SDF_VERSION:INTERNAL=
+SDF_sdformat_INCLUDEDIR:INTERNAL=
+SDF_sdformat_LIBDIR:INTERNAL=
+SDF_sdformat_PREFIX:INTERNAL=
+SDF_sdformat_VERSION:INTERNAL=
 //CMAKE_INSTALL_PREFIX during last run
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/home/hayden_b/workspace/catkin_ws/install
+__pkg_config_arguments_GAZEBO:INTERNAL=gazebo
+__pkg_config_checked_GAZEBO:INTERNAL=1
+__pkg_config_checked_SDF:INTERNAL=1
+//ADVANCED property for variable: boost_headers_DIR
+boost_headers_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_system_DIR
+boost_system_DIR-ADVANCED:INTERNAL=1
 generated_dir:INTERNAL=/home/hayden_b/workspace/catkin_ws/build/gtest/googletest/generated
 //ADVANCED property for variable: gmock_build_tests
 gmock_build_tests-ADVANCED:INTERNAL=1
@@ -768,5 +1001,58 @@ gtest_disable_pthreads-ADVANCED:INTERNAL=1
 gtest_force_shared_crt-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: gtest_hide_internal_symbols
 gtest_hide_internal_symbols-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_GAZEBO_atomic
+pkgcfg_lib_GAZEBO_atomic-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_GAZEBO_boost_date_time
+pkgcfg_lib_GAZEBO_boost_date_time-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_GAZEBO_boost_filesystem
+pkgcfg_lib_GAZEBO_boost_filesystem-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_GAZEBO_boost_iostreams
+pkgcfg_lib_GAZEBO_boost_iostreams-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_GAZEBO_boost_program_options
+pkgcfg_lib_GAZEBO_boost_program_options-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_GAZEBO_boost_regex
+pkgcfg_lib_GAZEBO_boost_regex-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_GAZEBO_boost_system
+pkgcfg_lib_GAZEBO_boost_system-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_GAZEBO_boost_thread
+pkgcfg_lib_GAZEBO_boost_thread-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_GAZEBO_gazebo
+pkgcfg_lib_GAZEBO_gazebo-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_GAZEBO_gazebo_client
+pkgcfg_lib_GAZEBO_gazebo_client-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_GAZEBO_gazebo_common
+pkgcfg_lib_GAZEBO_gazebo_common-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_GAZEBO_gazebo_gui
+pkgcfg_lib_GAZEBO_gazebo_gui-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_GAZEBO_gazebo_msgs
+pkgcfg_lib_GAZEBO_gazebo_msgs-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_GAZEBO_gazebo_physics
+pkgcfg_lib_GAZEBO_gazebo_physics-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_GAZEBO_gazebo_rendering
+pkgcfg_lib_GAZEBO_gazebo_rendering-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_GAZEBO_gazebo_sensors
+pkgcfg_lib_GAZEBO_gazebo_sensors-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_GAZEBO_gazebo_transport
+pkgcfg_lib_GAZEBO_gazebo_transport-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_GAZEBO_ignition-fuel_tools4
+pkgcfg_lib_GAZEBO_ignition-fuel_tools4-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_GAZEBO_ignition-math6
+pkgcfg_lib_GAZEBO_ignition-math6-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_GAZEBO_ignition-msgs5
+pkgcfg_lib_GAZEBO_ignition-msgs5-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_GAZEBO_ignition-transport8
+pkgcfg_lib_GAZEBO_ignition-transport8-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_GAZEBO_protobuf
+pkgcfg_lib_GAZEBO_protobuf-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_GAZEBO_sdformat9
+pkgcfg_lib_GAZEBO_sdformat9-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_GAZEBO_tbb
+pkgcfg_lib_GAZEBO_tbb-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_GAZEBO_tinyxml2
+pkgcfg_lib_GAZEBO_tinyxml2-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_GAZEBO_uuid
+pkgcfg_lib_GAZEBO_uuid-ADVANCED:INTERNAL=1
+prefix_result:INTERNAL=/usr/lib/x86_64-linux-gnu
 targets_export_name:INTERNAL=GTestTargets
 

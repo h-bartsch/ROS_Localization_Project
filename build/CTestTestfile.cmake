@@ -7,4 +7,5 @@
 subdirs("gtest")
 subdirs("first_package")
 subdirs("project2/my_robot")
+subdirs("teleop_twist_keyboard")
 subdirs("project2/ball_chaser")
